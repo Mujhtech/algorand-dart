@@ -560,10 +560,10 @@ class Algorand {
   ///
   /// Throws an [AlgorandException] if there is an HTTP error.
   /// Returns the account's balance in microAlgos.
-  Future<BigInt> getBalance(String address) async {
+  Future<BigInt?> getBalance(String address) async {
     final response = await _indexer.getAccountByAddress(address);
 
-    return response.account.amountWithoutPendingRewards;
+    return response.account?.amountWithoutPendingRewards;
   }
 
   /// Get the list of pending transactions by address, sorted by priority,

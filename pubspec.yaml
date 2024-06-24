@@ -4,9 +4,10 @@ version: 2.0.0-dev.14
 homepage: https://www.algorand.com
 repository: https://github.com/RootSoft/algorand-dart
 issue_tracker: https://github.com/RootSoft/algorand-dart/issues
+publish_to: none
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: ">=3.4.0 <4.0.0"
 
 dependencies:
   # Ed25519
@@ -34,20 +35,22 @@ dependencies:
   collection: ^1.17.0
 
   # HTTP & REST
-  dio: ^4.0.6
-  retrofit: ^3.3.1
+  dio: ^5.4.3+1
+  retrofit: ^4.1.0
 
   # Messagepack
   algorand_msgpack: ^1.0.1
 
-  algorand_json: ^0.0.1
+  algorand_json:
+    git:
+      url: https://github.com/Mujhtech/algorand-json.git
 
 dev_dependencies:
   # Testing framework
   test: ^1.23.1
 
   # Build Runner & Source Generation
-  build_runner: '>2.3.0 <4.0.0'
+  build_runner: ">2.3.0 <4.0.0"
 
   # Linter
   pedantic: ^1.11.0
@@ -56,4 +59,4 @@ dev_dependencies:
   json_serializable: ^6.6.1
 
   # Retrofit
-  retrofit_generator: ^4.2.0
+  retrofit_generator: ^8.1.0
